@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBroker.Application.WebApi", "TelegramBroker.Application.WebApi\TelegramBroker.Application.WebApi.csproj", "{17B5BF38-97C2-4C17-9DE3-772209BA0A39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{DA3A0CFC-90D2-4642-847F-982AE5CA9E1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{249CD330-977D-4EA3-A85E-B8E85EA5565C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{583E1FD1-C61F-4310-ADA5-FD90A77B04D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBroker.Infrastructure.Agents", "TelegramBroker.Infrastructure.Agents\TelegramBroker.Infrastructure.Agents.csproj", "{DBDF91D7-BBD6-4A06-94CC-90EE36153CF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBroker.Domain.Models", "TelegramBroker.Domain.Models\TelegramBroker.Domain.Models.csproj", "{4214A0DC-5E8F-42B9-B75F-E834E13F1A7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBroker.Domain.Services", "TelegramBroker.Domain.Services\TelegramBroker.Domain.Services.csproj", "{05E67BE5-1C52-483F-A898-F4B7B9D5B039}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBroker.Domain.Interfaces", "TelegramBroker.Domain.Interfaces\TelegramBroker.Domain.Interfaces.csproj", "{BF55CE11-76EF-4763-A469-09128247798C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBroker.Infrastructure.Interfaces", "TelegramBroker.Infrastructure.Interfaces\TelegramBroker.Infrastructure.Interfaces.csproj", "{271E4A53-88BE-4B29-B877-9B489BF3D72D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Tests", "Unit Tests", "{41CDDC36-DA5D-410D-A3D0-514C22CD09C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBroker.Application.Tests", "TelegramBroker.Application.Tests\TelegramBroker.Application.Tests.csproj", "{4820EE8E-00F0-4D7D-AAC9-DF2E76E0DA4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBroker.Domain.Tests", "TelegramBroker.Domain.Tests\TelegramBroker.Domain.Tests.csproj", "{E59339DC-87D2-4457-8517-226BFF091985}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17B5BF38-97C2-4C17-9DE3-772209BA0A39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17B5BF38-97C2-4C17-9DE3-772209BA0A39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17B5BF38-97C2-4C17-9DE3-772209BA0A39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17B5BF38-97C2-4C17-9DE3-772209BA0A39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBDF91D7-BBD6-4A06-94CC-90EE36153CF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBDF91D7-BBD6-4A06-94CC-90EE36153CF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBDF91D7-BBD6-4A06-94CC-90EE36153CF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBDF91D7-BBD6-4A06-94CC-90EE36153CF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4214A0DC-5E8F-42B9-B75F-E834E13F1A7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4214A0DC-5E8F-42B9-B75F-E834E13F1A7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4214A0DC-5E8F-42B9-B75F-E834E13F1A7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4214A0DC-5E8F-42B9-B75F-E834E13F1A7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05E67BE5-1C52-483F-A898-F4B7B9D5B039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05E67BE5-1C52-483F-A898-F4B7B9D5B039}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05E67BE5-1C52-483F-A898-F4B7B9D5B039}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05E67BE5-1C52-483F-A898-F4B7B9D5B039}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF55CE11-76EF-4763-A469-09128247798C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF55CE11-76EF-4763-A469-09128247798C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF55CE11-76EF-4763-A469-09128247798C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF55CE11-76EF-4763-A469-09128247798C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{271E4A53-88BE-4B29-B877-9B489BF3D72D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{271E4A53-88BE-4B29-B877-9B489BF3D72D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{271E4A53-88BE-4B29-B877-9B489BF3D72D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{271E4A53-88BE-4B29-B877-9B489BF3D72D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4820EE8E-00F0-4D7D-AAC9-DF2E76E0DA4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4820EE8E-00F0-4D7D-AAC9-DF2E76E0DA4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4820EE8E-00F0-4D7D-AAC9-DF2E76E0DA4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4820EE8E-00F0-4D7D-AAC9-DF2E76E0DA4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E59339DC-87D2-4457-8517-226BFF091985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E59339DC-87D2-4457-8517-226BFF091985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E59339DC-87D2-4457-8517-226BFF091985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E59339DC-87D2-4457-8517-226BFF091985}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{17B5BF38-97C2-4C17-9DE3-772209BA0A39} = {DA3A0CFC-90D2-4642-847F-982AE5CA9E1E}
+		{DBDF91D7-BBD6-4A06-94CC-90EE36153CF7} = {583E1FD1-C61F-4310-ADA5-FD90A77B04D0}
+		{4214A0DC-5E8F-42B9-B75F-E834E13F1A7C} = {249CD330-977D-4EA3-A85E-B8E85EA5565C}
+		{05E67BE5-1C52-483F-A898-F4B7B9D5B039} = {249CD330-977D-4EA3-A85E-B8E85EA5565C}
+		{BF55CE11-76EF-4763-A469-09128247798C} = {249CD330-977D-4EA3-A85E-B8E85EA5565C}
+		{271E4A53-88BE-4B29-B877-9B489BF3D72D} = {583E1FD1-C61F-4310-ADA5-FD90A77B04D0}
+		{4820EE8E-00F0-4D7D-AAC9-DF2E76E0DA4F} = {41CDDC36-DA5D-410D-A3D0-514C22CD09C9}
+		{E59339DC-87D2-4457-8517-226BFF091985} = {41CDDC36-DA5D-410D-A3D0-514C22CD09C9}
+	EndGlobalSection
+EndGlobal
