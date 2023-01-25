@@ -7,7 +7,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["TelegramBroker.Application.WebApi/TelegramBroker.Application.WebApi.csproj", "TelegramBroker.Application.WebApi/"]
 RUN dotnet restore "TelegramBroker.Application.WebApi/TelegramBroker.Application.WebApi.csproj"
-COPY ./src /
+COPY ../ /
 WORKDIR "/src/TelegramBroker.Application.WebApi"
 RUN dotnet build "TelegramBroker.Application.WebApi.csproj" -c Release -o /app/build
 
