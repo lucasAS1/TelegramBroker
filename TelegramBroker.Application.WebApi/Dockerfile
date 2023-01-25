@@ -3,6 +3,9 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
+RUN addgroup -S telegrambroker \
+    && adduser -S telegrambroker -G telegrambroker
+
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["TelegramBroker.Application.WebApi/TelegramBroker.Application.WebApi.csproj", "TelegramBroker.Application.WebApi/"]
@@ -15,6 +18,7 @@ FROM build AS publish
 RUN dotnet publish "TelegramBroker.Application.WebApi.csproj" -c Release -o /app/publish
 
 FROM base AS final
+USER telegrambroker
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "TelegramBroker.Application.WebApi.dll"]
