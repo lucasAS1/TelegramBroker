@@ -5,6 +5,6 @@ namespace TelegramBroker.Domain.Models.Settings;
 [ExcludeFromCodeCoverage]
 public class ApiSettings
 {
-    public string TelegramApiToken { get; set; }
-    public string TelegramApiUrl { get; set; }
+    public string TelegramApiToken { get; init; } = null!;
+    public string TelegramApiUrl { get; init; } = null!;
 }

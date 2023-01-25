@@ -3,7 +3,7 @@
 namespace TelegramBroker.Domain.Models.Responses;
 
 [ExcludeFromCodeCoverage]
-public class MessageResponse
+public abstract class MessageResponse
 {
     public bool ok { get; set; }
     public Result result { get; set; }
