@@ -5,6 +5,6 @@ namespace TelegramBroker.Domain.Models.Requests;
 [ExcludeFromCodeCoverage]
 public class MessageRequest
 {
-    public string ChatId { get; set; }
-    public string Text { get; set; }
+    public string ChatId { get; init; } = null!;
+    public string Text { get; init; } = null!;
 }

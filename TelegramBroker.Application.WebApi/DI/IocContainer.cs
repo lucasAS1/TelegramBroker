@@ -14,7 +14,6 @@ public class IocContainer : Module
     {
         ConfigureInfrastructureLayer(builder);
         ConfigureDomainLayer(builder);
-        ConfigureApplicationLayer(builder);
     }
 
     private static void ConfigureInfrastructureLayer(ContainerBuilder builder)
@@ -24,11 +23,7 @@ public class IocContainer : Module
     
     private static void ConfigureDomainLayer(ContainerBuilder builder)
     {
-        builder.RegisterType<TelegramService>().As<ITelegramService>();
-    }
-    
-    private static void ConfigureApplicationLayer(ContainerBuilder builder)
-    {
         
+        builder.RegisterType<TelegramService>().As<ITelegramService>();
     }
 }
