@@ -29,9 +29,4 @@ public class IocContainer : Module
         builder.RegisterType<TelegramService>().As<ITelegramService>();
         builder.RegisterType<TelegramFacade>().As<ITelegramFacade>();
     }
-
-    private static void ConfigureApplicationLayer(ContainerBuilder builder)
-    {
-        builder.RegisterType<IHostedService>().As<ConsumingService>();
-    }
 }

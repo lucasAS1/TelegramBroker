@@ -20,5 +20,6 @@ public class TelegramFacadesTests
         var aut = new TelegramFacade(_queueService.Object);
         
         aut.SendMessage(new {});
+        _queueService.Verify(x => x.Send(It.IsAny<object>(), It.IsAny<string>(),It.IsAny<string>()), Times.Once);
     }
 }

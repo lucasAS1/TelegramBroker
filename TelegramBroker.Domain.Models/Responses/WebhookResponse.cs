@@ -6,5 +6,5 @@ namespace TelegramBroker.Domain.Models.Responses;
 public class WebhookResponse
 {
     public long update_id { get; set; }
-    public Result message { get; set; }
+    public Result message { get; init; } = null!;
 }

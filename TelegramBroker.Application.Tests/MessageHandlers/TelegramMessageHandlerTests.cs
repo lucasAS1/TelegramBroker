@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Threading.Tasks;
 using AutoFixture;
 using AutoFixture.AutoMoq;
@@ -38,10 +39,16 @@ public class TelegramMessageHandlerTests
     public async Task ShouldProperlyHandleMessageReceivingEvent()
     {
         ConfigureMocks();
-        var argsMock = new Mock<BasicDeliverEventArgs>();
+        var argsMock = _fixture
+            .Build<BasicDeliverEventArgs>()
+            .With(x => x.Body, Encoding.ASCII.GetBytes("{\"Chat\":\"teste\",\"chatId\":\"1234364\"}"))
+            .WithAutoProperties()
+            .Create();
+        
         var aut = new TelegramMessageHandler(_telegramServiceMock.Object);
-        var messageHandlingContext = new MessageHandlingContext(argsMock.Object, x => { }, false);
+        var messageHandlingContext = new MessageHandlingContext(argsMock, x => x.Exchange = "testexchange", false);
         
         await aut.Handle(messageHandlingContext, "test-route");
+        Assert.Equal(messageHandlingContext.Message.Exchange, argsMock.Exchange);
     }
 }
