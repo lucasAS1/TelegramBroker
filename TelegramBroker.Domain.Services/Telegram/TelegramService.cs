@@ -1,9 +1,9 @@
-﻿using ClassLibrary1TelegramBroker.Domain.Interfaces.Services.Telegram;
+﻿using TelegramBroker.Domain.Interfaces.Services.Telegram;
 using TelegramBroker.Domain.Models.Requests;
 using TelegramBroker.Domain.Models.Responses;
 using TelegramBroker.Infrastructure.Interfaces.Agents;
 
-namespace ClassLibrary1TelegramBroker.Domain.Services.Telegram;
+namespace TelegramBroker.Domain.Services.Telegram;
 
 public class TelegramService : ITelegramService
 {

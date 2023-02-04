@@ -10,10 +10,12 @@
     <ItemGroup>
         <PackageReference Include="Autofac" Version="6.5.0" />
         <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+        <PackageReference Include="RabbitMQ.Client.Core.DependencyInjection" Version="5.0.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\TelegramBroker.Domain.Facades\TelegramBroker.Domain.Facades.csproj" />
       <ProjectReference Include="..\TelegramBroker.Domain.Interfaces\TelegramBroker.Domain.Interfaces.csproj" />
       <ProjectReference Include="..\TelegramBroker.Domain.Services\TelegramBroker.Domain.Services.csproj" />
       <ProjectReference Include="..\TelegramBroker.Infrastructure.Agents\TelegramBroker.Infrastructure.Agents.csproj" />

@@ -1,0 +1,47 @@
+﻿using System;
+using System.Threading.Tasks;
+using AutoFixture;
+using AutoFixture.AutoMoq;
+using Moq;
+using RabbitMQ.Client.Core.DependencyInjection.Models;
+using RabbitMQ.Client.Events;
+using TelegramBroker.Application.WebApi.MessageHandlers;
+using TelegramBroker.Domain.Interfaces.Services.Telegram;
+using TelegramBroker.Domain.Models.Requests;
+using TelegramBroker.Domain.Models.Responses;
+using Xunit;
+
+namespace TelegramBroker.Application.Tests.MessageHandlers;
+
+public class TelegramMessageHandlerTests
+{
+    private readonly Mock<ITelegramService> _telegramServiceMock;
+    private readonly IFixture _fixture;
+
+    public TelegramMessageHandlerTests()
+    {
+        _fixture = new Fixture();
+        _telegramServiceMock = new Mock<ITelegramService>();
+       
+        _fixture.Customize(new AutoMoqCustomization(){ConfigureMembers = true});
+    }
+    
+    private void ConfigureMocks()
+    {
+        _telegramServiceMock
+            .Setup(x => x.SendMessageAsync(It.IsAny<MessageRequest>()))
+            .ReturnsAsync(_fixture.Create<MessageResponse>());
+    }
+    
+    
+    [Fact]
+    public async Task ShouldProperlyHandleMessageReceivingEvent()
+    {
+        ConfigureMocks();
+        var argsMock = new Mock<BasicDeliverEventArgs>();
+        var aut = new TelegramMessageHandler(_telegramServiceMock.Object);
+        var messageHandlingContext = new MessageHandlingContext(argsMock.Object, x => { }, false);
+        
+        await aut.Handle(messageHandlingContext, "test-route");
+    }
+}

@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using AutoFixture;
 using AutoFixture.AutoMoq;
-using ClassLibrary1TelegramBroker.Domain.Services.Telegram;
+using TelegramBroker.Domain.Services.Telegram;
 using FluentAssertions;
 using Moq;
 using TelegramBroker.Domain.Models.Requests;

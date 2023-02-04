@@ -1,7 +1,7 @@
 ﻿using TelegramBroker.Domain.Models.Requests;
 using TelegramBroker.Domain.Models.Responses;
 
-namespace ClassLibrary1TelegramBroker.Domain.Interfaces.Services.Telegram;
+namespace TelegramBroker.Domain.Interfaces.Services.Telegram;
 
 public interface ITelegramService
 {
