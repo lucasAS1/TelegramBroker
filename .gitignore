@@ -6,3 +6,4 @@ riderModule.iml
 *.Development.*
 .idea
 TelegramBroker.sln.DotSettings.user
+TelegramBroker.Application.WebApi/Controllers/TesteController.cs

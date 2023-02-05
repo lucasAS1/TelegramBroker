@@ -1,7 +1,10 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using TelegramBroker.Domain.Facades.Telegram;
+using System.Diagnostics.CodeAnalysis;
 using Autofac;
-using ClassLibrary1TelegramBroker.Domain.Interfaces.Services.Telegram;
-using ClassLibrary1TelegramBroker.Domain.Services.Telegram;
+using RabbitMQ.Client.Core.DependencyInjection.Services;
+using TelegramBroker.Domain.Interfaces.Facades;
+using TelegramBroker.Domain.Interfaces.Services.Telegram;
+using TelegramBroker.Domain.Services.Telegram;
 using TelegramBroker.Infrastructure.Agents.Telegram;
 using TelegramBroker.Infrastructure.Interfaces.Agents;
 
@@ -23,7 +26,7 @@ public class IocContainer : Module
     
     private static void ConfigureDomainLayer(ContainerBuilder builder)
     {
-        
         builder.RegisterType<TelegramService>().As<ITelegramService>();
+        builder.RegisterType<TelegramFacade>().As<ITelegramFacade>();
     }
 }

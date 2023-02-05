@@ -1,5 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using ClassLibrary1TelegramBroker.Domain.Interfaces.Services.Telegram;
+using TelegramBroker.Domain.Interfaces.Services.Telegram;
 using Microsoft.AspNetCore.Mvc;
 using TelegramBroker.Domain.Models.Requests;
 
