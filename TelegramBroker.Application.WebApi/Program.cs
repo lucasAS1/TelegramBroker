@@ -1,5 +1,6 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration.AzureKeyVault;
 using RabbitMQ.Client.Core.DependencyInjection;
 using TelegramBroker.Application.WebApi.DI;
 using TelegramBroker.Application.WebApi.MessageHandlers;
@@ -16,6 +17,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Configuration
     .AddJsonFile("appsettings.json")
+    .AddAzureKeyVault(
+        builder.Configuration["KeyVaultClientDNS"],
+        builder.Configuration["KeyVaultClientId"],
+        builder.Configuration["KeyVaultClientSecret"],
+        new DefaultKeyVaultSecretManager())
     .AddEnvironmentVariables();
 builder.Services.Configure<ApiSettings>(builder.Configuration.GetSection("Settings"));
 builder.Services
