@@ -10,4 +10,10 @@
       <ProjectReference Include="..\TelegramBroker.Domain.Models\TelegramBroker.Domain.Models.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="ChatbotProject.Common.Domain.Models">
+        <HintPath>C:\Users\lucas\.nuget\packages\chatbotproject.common.domain.models\0.3.1\lib\net6.0\ChatbotProject.Common.Domain.Models.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>

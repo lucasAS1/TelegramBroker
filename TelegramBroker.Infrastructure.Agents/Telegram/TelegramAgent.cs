@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using ChatbotProject.Common.Domain.Models.Requests;
 using Flurl;
 using Flurl.Http;
 using Microsoft.Extensions.Options;
 using Polly;
-using TelegramBroker.Domain.Models.Requests;
 using TelegramBroker.Domain.Models.Responses;
 using TelegramBroker.Domain.Models.Settings;
 using TelegramBroker.Infrastructure.Interfaces.Agents;

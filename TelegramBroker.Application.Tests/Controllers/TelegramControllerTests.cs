@@ -1,16 +1,16 @@
 ﻿using System.Threading.Tasks;
 using AutoFixture;
 using AutoFixture.AutoMoq;
-using TelegramBroker.Domain.Interfaces.Services.Telegram;
+using ChatbotProject.Common.Domain.Models.Requests;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using TelegramBroker.Application.WebApi.Controllers;
-using TelegramBroker.Domain.Models.Requests;
+using TelegramBroker.Domain.Interfaces.Services.Telegram;
 using TelegramBroker.Domain.Models.Responses;
 using Xunit;
 
-namespace TelegramBroker.Application.Tests;
+namespace TelegramBroker.Application.Tests.Controllers;
 
 public class TelegramControllerTests
 {

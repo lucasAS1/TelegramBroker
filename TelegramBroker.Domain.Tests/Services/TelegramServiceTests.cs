@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
 using AutoFixture;
 using AutoFixture.AutoMoq;
+using ChatbotProject.Common.Domain.Models.Requests;
 using TelegramBroker.Domain.Services.Telegram;
 using FluentAssertions;
 using Moq;
-using TelegramBroker.Domain.Models.Requests;
 using TelegramBroker.Domain.Models.Responses;
 using TelegramBroker.Infrastructure.Interfaces.Agents;
 using Xunit;

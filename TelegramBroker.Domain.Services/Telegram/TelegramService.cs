@@ -1,5 +1,5 @@
-﻿using TelegramBroker.Domain.Interfaces.Services.Telegram;
-using TelegramBroker.Domain.Models.Requests;
+﻿using ChatbotProject.Common.Domain.Models.Requests;
+using TelegramBroker.Domain.Interfaces.Services.Telegram;
 using TelegramBroker.Domain.Models.Responses;
 using TelegramBroker.Infrastructure.Interfaces.Agents;
 

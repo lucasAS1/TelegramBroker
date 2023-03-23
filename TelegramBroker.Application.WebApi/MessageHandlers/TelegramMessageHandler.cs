@@ -1,7 +1,7 @@
-﻿using RabbitMQ.Client.Core.DependencyInjection.MessageHandlers;
+﻿using ChatbotProject.Common.Domain.Models.Requests;
+using RabbitMQ.Client.Core.DependencyInjection.MessageHandlers;
 using RabbitMQ.Client.Core.DependencyInjection.Models;
 using TelegramBroker.Domain.Interfaces.Services.Telegram;
-using TelegramBroker.Domain.Models.Requests;
 using static System.Text.Encoding;
 using static Newtonsoft.Json.JsonConvert;
 
