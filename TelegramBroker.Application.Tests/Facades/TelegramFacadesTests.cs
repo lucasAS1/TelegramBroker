@@ -1,6 +1,7 @@
 ﻿using Moq;
 using RabbitMQ.Client.Core.DependencyInjection.Services.Interfaces;
 using TelegramBroker.Domain.Facades.Telegram;
+using TelegramBroker.Domain.Models.Responses;
 using Xunit;
 
 namespace TelegramBroker.Application.Tests.Facades;
@@ -19,7 +20,7 @@ public class TelegramFacadesTests
     {
         var aut = new TelegramFacade(_queueService.Object);
         
-        aut.SendMessage(new {});
-        _queueService.Verify(x => x.Send(It.IsAny<object>(), It.IsAny<string>(),It.IsAny<string>()), Times.Once);
+        aut.SendMessage(new WebhookResponse(){});
+        _queueService.Verify(x => x.Send(It.IsAny<WebhookResponse>(), It.IsAny<string>(),It.IsAny<string>()), Times.Once);
     }
 }
