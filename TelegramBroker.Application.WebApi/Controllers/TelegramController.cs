@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using ChatbotProject.Common.Domain.Models.Requests;
 using TelegramBroker.Domain.Interfaces.Services.Telegram;
 using Microsoft.AspNetCore.Mvc;
-using TelegramBroker.Domain.Models.Requests;
 
 namespace TelegramBroker.Application.WebApi.Controllers;
 

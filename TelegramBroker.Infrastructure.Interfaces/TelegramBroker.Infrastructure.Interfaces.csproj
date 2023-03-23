@@ -10,4 +10,8 @@
       <ProjectReference Include="..\TelegramBroker.Domain.Models\TelegramBroker.Domain.Models.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="ChatbotProject.Common.Domain.Models" Version="0.3.1" />
+    </ItemGroup>
+
 </Project>

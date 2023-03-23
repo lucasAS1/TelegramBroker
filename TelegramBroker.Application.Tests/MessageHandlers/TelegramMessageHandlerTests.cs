@@ -1,14 +1,13 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 using System.Threading.Tasks;
 using AutoFixture;
 using AutoFixture.AutoMoq;
+using ChatbotProject.Common.Domain.Models.Requests;
 using Moq;
 using RabbitMQ.Client.Core.DependencyInjection.Models;
 using RabbitMQ.Client.Events;
 using TelegramBroker.Application.WebApi.MessageHandlers;
 using TelegramBroker.Domain.Interfaces.Services.Telegram;
-using TelegramBroker.Domain.Models.Requests;
 using TelegramBroker.Domain.Models.Responses;
 using Xunit;
 
