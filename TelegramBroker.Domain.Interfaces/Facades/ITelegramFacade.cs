@@ -1,6 +1,8 @@
-﻿namespace TelegramBroker.Domain.Interfaces.Facades;
+﻿using TelegramBroker.Domain.Models.Responses;
+
+namespace TelegramBroker.Domain.Interfaces.Facades;
 
 public interface ITelegramFacade
 {
-    public void SendMessage(object message);
+    public void SendMessage(WebhookResponse message);
 }

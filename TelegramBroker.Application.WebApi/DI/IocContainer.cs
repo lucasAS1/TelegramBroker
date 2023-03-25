@@ -1,7 +1,6 @@
 ﻿using TelegramBroker.Domain.Facades.Telegram;
 using System.Diagnostics.CodeAnalysis;
 using Autofac;
-using RabbitMQ.Client.Core.DependencyInjection.Services;
 using TelegramBroker.Domain.Interfaces.Facades;
 using TelegramBroker.Domain.Interfaces.Services.Telegram;
 using TelegramBroker.Domain.Services.Telegram;
