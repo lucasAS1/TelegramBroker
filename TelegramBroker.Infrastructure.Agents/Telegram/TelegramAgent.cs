@@ -4,6 +4,7 @@ using Flurl;
 using Flurl.Http;
 using Microsoft.Extensions.Options;
 using Polly;
+using TelegramBroker.Domain.Models.Requests;
 using TelegramBroker.Domain.Models.Responses;
 using TelegramBroker.Domain.Models.Settings;
 using TelegramBroker.Infrastructure.Interfaces.Agents;
@@ -24,18 +25,18 @@ public class TelegramAgent : ITelegramAgent
         _apiToken = configValues.TelegramApiToken;
     }
     
-    public async Task<MessageResponse> SendMessage(MessageRequest request)
+    public async Task<MessageResponse> SendMessage(TelegramMessageRequest request)
     {
-        var resposta = await Policy
+        var response = await Policy
             .Handle<FlurlHttpException>()
             .RetryAsync(3)
             .ExecuteAsync(() => _url
                 .AppendPathSegment(_apiToken)
                 .AppendPathSegment("sendMessage")
-                .SetQueryParams($"chat_id={request.ChatId}",$"text={request.Text}")
-                .GetJsonAsync<MessageResponse>()
+                .PostJsonAsync(request)
+                .ReceiveJson<MessageResponse>()
             );
 
-        return resposta;
+        return response;
     }
 }

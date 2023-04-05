@@ -1,5 +1,6 @@
 ﻿using ChatbotProject.Common.Domain.Models.Requests;
 using TelegramBroker.Domain.Interfaces.Services.Telegram;
+using TelegramBroker.Domain.Models.Requests;
 using TelegramBroker.Domain.Models.Responses;
 using TelegramBroker.Infrastructure.Interfaces.Agents;
 
@@ -16,8 +17,9 @@ public class TelegramService : ITelegramService
 
     public async Task<MessageResponse> SendMessageAsync(MessageRequest request)
     {
-        var resposta = await _telegramAgent.SendMessage(request);
+        var messageRequest = new TelegramMessageRequest(request);
+        var response = await _telegramAgent.SendMessage(messageRequest);
         
-        return resposta;
+        return response;
     }
 }
