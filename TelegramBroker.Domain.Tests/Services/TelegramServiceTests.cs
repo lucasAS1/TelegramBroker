@@ -5,6 +5,7 @@ using ChatbotProject.Common.Domain.Models.Requests;
 using TelegramBroker.Domain.Services.Telegram;
 using FluentAssertions;
 using Moq;
+using TelegramBroker.Domain.Models.Requests;
 using TelegramBroker.Domain.Models.Responses;
 using TelegramBroker.Infrastructure.Interfaces.Agents;
 using Xunit;
@@ -27,7 +28,7 @@ public class TelegramServiceTests
     private void ConfigureMocks()
     {
         _telegramAgent
-            .Setup(x => x.SendMessage(It.IsAny<MessageRequest>()))
+            .Setup(x => x.SendMessage(It.IsAny<TelegramMessageRequest>()))
             .ReturnsAsync(_fixture.Create<MessageResponse>());
     }
     

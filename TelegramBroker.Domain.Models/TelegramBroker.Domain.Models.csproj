@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="ChatbotProject.Common.Domain.Models" Version="0.3.1" />
+    </ItemGroup>
+
 </Project>
